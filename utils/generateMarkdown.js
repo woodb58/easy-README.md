@@ -29,7 +29,9 @@ ${response.test}
 
 
 ## Questions
-###Reach out at:
+
+###Reach out at
+
  [GitHub:](https://github.com/${response.username})
 
  Email: ${response.email}    
