@@ -1,30 +1,40 @@
 function generateMarkdown(response) {
   return `
+
 # ${response.title}
-    
-## Repository Description
-${response.description}
+${response.license}
 
-## Installation Instructions
-${response.installation}
+## Table-of-Contents
+* [Usage](#usage)
+* [Description](#description)
+* [Installation](#installation)
+* [Contributions](#contributions)
+* [Test](#test)
+* [Questions](#questions)
 
-## Usage Details 
+## Usage 
 ${response.usage}
 
-## Contributions 
+## Description
+${response.description}
+
+## Installation
+${response.installation}
+ 
+## Contributions
 ${response.contribution}
 
 ## Test 
 ${response.test}
 
-## Will be moved later 
-${response.license}
 
-## Will be moved later 
-${response.username}
+## Questions
 
-## will be moved later 
-    ${response.email}    
+Reach out at:
+
+ GitHub: [${response.username}](https://github.com/${response.username})
+
+ Email: ${response.email}    
 
     `;
 }

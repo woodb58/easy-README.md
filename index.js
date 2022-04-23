@@ -7,39 +7,79 @@ const questions = [
     type: "input",
     message: "Enter project title",
     name: "title",
-    validate: .title => {
-      if (!.title) {
-          return false;
+    validate: (title) => {
+      if (!title) {
+        return false;
       } else {
-          console.log('Enter your .title!');
-          return true;
+        console.log("Enter your title!");
+        return true;
       }
-  }
+    },
   },
   {
     type: "input",
     message: "Describe your project",
     name: "description",
+    validate: (description) => {
+      if (!description) {
+        return false;
+      } else {
+        console.log("Enter your description!");
+        return true;
+      }
+    },
   },
   {
     type: "input",
     message: "Detail installation instructions",
     name: "installation",
+    validate: (installation) => {
+      if (!installation) {
+        return false;
+      } else {
+        console.log("Enter your installation!");
+        return true;
+      }
+    },
   },
   {
     type: "input",
     message: "Provide and usage information",
     name: "usage",
+    validate: (usage) => {
+      if (!usage) {
+        return false;
+      } else {
+        console.log("Enter your usage!");
+        return true;
+      }
+    },
   },
   {
     type: "input",
     message: "Provide contribution guidelines",
     name: "contribution",
+    validate: (contribution) => {
+      if (!contribution) {
+        return false;
+      } else {
+        console.log("Enter your contribution!");
+        return true;
+      }
+    },
   },
   {
     type: "input",
     message: "List test instructions",
     name: "test",
+    validate: (test) => {
+      if (!test) {
+        return false;
+      } else {
+        console.log("Enter your test!");
+        return true;
+      }
+    },
   },
   {
     type: "list",
@@ -51,11 +91,27 @@ const questions = [
     type: "input",
     message: "Enter GitHub username",
     name: "username",
+    validate: (username) => {
+      if (!username) {
+        return false;
+      } else {
+        console.log("Enter your username!");
+        return true;
+      }
+    },
   },
   {
     type: "input",
     message: "Enter email",
     name: "email",
+    validate: (email) => {
+      if (!email) {
+        return false;
+      } else {
+        console.log("Enter your email!");
+        return true;
+      }
+    },
   },
 ];
 
@@ -69,14 +125,6 @@ inquirer.prompt(questions).then((response) => {
     console.log("generated");
   });
 });
-
-// TODO: Include packages needed for this application
-
-// TODO: Create an array of questions for user input
-// const questions = [];
-
-// TODO: Create a function to write README file
-// function writeToFile(fileName, response) {}
 
 // TODO: Create a function to initialize app
 // function init() {}
