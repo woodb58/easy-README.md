@@ -1,6 +1,6 @@
 
 
-# www
+# dddd
 mit
 
 ## Table-of-Contents
@@ -11,25 +11,25 @@ mit
 * [Test](#test)
 * [Questions](#questions)
 
-## [Usage] 
-w
+## Usage 
+d
 
-## [Description]
-w
+## Description
+d
 
-## [Installation]
-w
+## Installation
+d
  
-## [Contributions]
-w
+## Contributions
+d
 
-## [Test] 
-w
+## Test 
+d
 
 
-## [Questions]
+## Questions
  Reach out at:
- [GitHub:](https://github.com/w)
- [Email:woodb58@gmail.com]    
+ [GitHub:](https://github.com/woodb58)
+ [Email: woodb58@gmail.com]    
 
     
