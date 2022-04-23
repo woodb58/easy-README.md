@@ -9,9 +9,9 @@ const questions = [
     name: "title",
     validate: (title) => {
       if (!title) {
-        console.log("please enter title for project");
         return false;
       } else {
+        console.log("Enter your title!");
         return true;
       }
     },
@@ -22,9 +22,9 @@ const questions = [
     name: "description",
     validate: (description) => {
       if (!description) {
-        console.log("please enter project description");
         return false;
       } else {
+        console.log("Enter your description!");
         return true;
       }
     },
@@ -35,9 +35,9 @@ const questions = [
     name: "installation",
     validate: (installation) => {
       if (!installation) {
-        console.log("please enter installation for project");
         return false;
       } else {
+        console.log("Enter your installation!");
         return true;
       }
     },
@@ -48,9 +48,9 @@ const questions = [
     name: "usage",
     validate: (usage) => {
       if (!usage) {
-        console.log("please enter usage for project");
         return false;
       } else {
+        console.log("Enter your usage!");
         return true;
       }
     },
@@ -59,18 +59,27 @@ const questions = [
     type: "input",
     message: "Provide contribution guidelines",
     name: "contribution",
-  },
-  {
-    type: "confirm",
-    message: "Would you like to include test results?",
-    name: "confirmTest",
-    default: true,
+    validate: (contribution) => {
+      if (!contribution) {
+        return false;
+      } else {
+        console.log("Enter your contribution!");
+        return true;
+      }
+    },
   },
   {
     type: "input",
-    message: "enter test information",
+    message: "List test instructions",
     name: "test",
-    when: ({ confirmTest }) => confirmTest,
+    validate: (test) => {
+      if (!test) {
+        return false;
+      } else {
+        console.log("Enter your test!");
+        return true;
+      }
+    },
   },
   {
     type: "list",
@@ -84,9 +93,9 @@ const questions = [
     name: "username",
     validate: (username) => {
       if (!username) {
-        console.log("please enter username for project");
         return false;
       } else {
+        console.log("Enter your username!");
         return true;
       }
     },
@@ -97,9 +106,9 @@ const questions = [
     name: "email",
     validate: (email) => {
       if (!email) {
-        console.log("please enter email for project");
         return false;
       } else {
+        console.log("Enter your email!");
         return true;
       }
     },

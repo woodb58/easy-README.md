@@ -5,12 +5,12 @@ function generateMarkdown(response) {
 ${response.license}
 
 ## Table-of-Contents
-* [Usage] (#usage)
-* [Description] (#description)
-* [Installation] (#installation)
-* [Contributions] (#contributions)
-* [Test] (#test)
-* [Questions] (#questions)
+* [Usage](#usage)
+* [Description](#description)
+* [Installation](#installation)
+* [Contributions](#contributions)
+* [Test](#test)
+* [Questions](#questions)
 
 ## [Usage] 
 ${response.usage}
