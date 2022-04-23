@@ -12,26 +12,26 @@ ${response.license}
 * [Test](#test)
 * [Questions](#questions)
 
-## [Usage] 
+## Usage 
 ${response.usage}
 
-## [Description]
+## Description
 ${response.description}
 
-## [Installation]
+## Installation
 ${response.installation}
  
-## [Contributions]
+## Contributions
 ${response.contribution}
 
-## [Test] 
+## Test 
 ${response.test}
 
 
-## [Questions]
+## Questions
  Reach out at:
  [GitHub:](https://github.com/${response.username})
- [Email:${response.email}]    
+ [Email: ${response.email}]    
 
     `;
 }
