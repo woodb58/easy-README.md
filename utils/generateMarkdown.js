@@ -6,22 +6,22 @@ function generateMarkdown(response) {
 ${response.description}
 
 ## Installation Instructions
-     ${response.installation}
+${response.installation}
 
 ## Usage Details 
-    ${response.usage}
+${response.usage}
 
 ## Contributions 
-    ${response.contribution}
+${response.contribution}
 
 ## Test 
-    ${response.test}
+${response.test}
 
 ## Will be moved later 
-    ${response.license}
+${response.license}
 
 ## Will be moved later 
-    ${response.username}
+${response.username}
 
 ## will be moved later 
     ${response.email}    

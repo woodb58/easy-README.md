@@ -7,6 +7,14 @@ const questions = [
     type: "input",
     message: "Enter project title",
     name: "title",
+    validate: .title => {
+      if (!.title) {
+          return false;
+      } else {
+          console.log('Enter your .title!');
+          return true;
+      }
+  }
   },
   {
     type: "input",
