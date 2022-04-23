@@ -1,6 +1,6 @@
 
 
-# w
+# www
 mit
 
 ## Table-of-Contents
@@ -29,7 +29,7 @@ w
 
 ## [Questions]
  Reach out at:
- [GitHub] (https://github.com/w)
- [Email:w]    
+ [GitHub:](https://github.com/w)
+ [Email:woodb58@gmail.com]    
 
     
