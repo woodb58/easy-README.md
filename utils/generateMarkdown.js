@@ -30,7 +30,7 @@ ${response.test}
 
 ## Questions
 
-###Reach out at
+Reach out at:
 
  GitHub: [${response.username}](https://github.com/${response.username})
 

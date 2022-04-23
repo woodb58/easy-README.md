@@ -1,6 +1,6 @@
 
 
-# w
+# wwwwwww
 mit
 
 ## Table-of-Contents
@@ -29,7 +29,7 @@ w
 
 ## Questions
 
-###Reach out at
+Reach out at:
 
  GitHub: [woodb58](https://github.com/woodb58)
 
