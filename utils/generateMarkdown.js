@@ -2,7 +2,7 @@ function generateMarkdown(response) {
   return `
 
 # ${response.title}
-${response.license}
+![badge](https://img.shields.io/badge/license-${response.license}-blue)
 
 ## Table-of-Contents
 * [Usage](#usage)
@@ -27,6 +27,11 @@ ${response.contribution}
 ## Test 
 ${response.test}
 
+## License
+![badge](https://img.shields.io/badge/license-${response.license}-blue)
+
+This application is covered by the ${response.license} license.
+ 
 
 ## Questions
 
