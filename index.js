@@ -11,7 +11,6 @@ const questions = [
       if (!title) {
         return false;
       } else {
-        console.log("Enter your title!");
         return true;
       }
     },
@@ -24,7 +23,6 @@ const questions = [
       if (!description) {
         return false;
       } else {
-        console.log("Enter your description!");
         return true;
       }
     },
@@ -37,7 +35,6 @@ const questions = [
       if (!installation) {
         return false;
       } else {
-        console.log("Enter your installation!");
         return true;
       }
     },
@@ -50,7 +47,6 @@ const questions = [
       if (!usage) {
         return false;
       } else {
-        console.log("Enter your usage!");
         return true;
       }
     },
@@ -63,7 +59,6 @@ const questions = [
       if (!contribution) {
         return false;
       } else {
-        console.log("Enter your contribution!");
         return true;
       }
     },
@@ -76,7 +71,6 @@ const questions = [
       if (!test) {
         return false;
       } else {
-        console.log("Enter your test!");
         return true;
       }
     },
@@ -85,7 +79,15 @@ const questions = [
     type: "list",
     message: "License for project",
     name: "license",
-    choices: ["mit", "Apache", "GPLv2", "GPLv3", "none"],
+    choices: [
+      "MIT",
+      "Apache-2.0",
+      "gpl-license",
+      "MPL-2.0",
+      "BSD-2-Clause",
+      "BSD-3-Clause",
+      "none",
+    ],
   },
   {
     type: "input",
@@ -95,7 +97,6 @@ const questions = [
       if (!username) {
         return false;
       } else {
-        console.log("Enter your username!");
         return true;
       }
     },
@@ -108,7 +109,6 @@ const questions = [
       if (!email) {
         return false;
       } else {
-        console.log("Enter your email!");
         return true;
       }
     },
@@ -120,7 +120,7 @@ inquirer.prompt(questions).then((response) => {
 
   let content = generateMarkdown(response);
   console.log(content);
-  fs.writeFile("./dist/README.md", content, (err) => {
+  fs.writeFile("./dist/README21.md", content, (err) => {
     if (err) throw err;
     console.log("generated");
   });

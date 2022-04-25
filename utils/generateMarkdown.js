@@ -1,8 +1,16 @@
+const showBadge = (license) => {
+  if (license == "none") {
+    return "";
+  } else {
+    return `![badge](https://img.shields.io/badge/license-${license}-blue)`;
+  }
+};
+
 function generateMarkdown(response) {
   return `
 
 # ${response.title}
-![badge](https://img.shields.io/badge/license-${response.license}-blue)
+${showBadge(response.license)}
 
 ## Table-of-Contents
 * [Usage](#usage)
@@ -28,9 +36,11 @@ ${response.contribution}
 ${response.test}
 
 ## License
-![badge](https://img.shields.io/badge/license-${response.license}-blue)
 
-This application is covered by the ${response.license} license.
+
+This application is covered by the [${
+    response.license
+  }](https://opensource.org/licenses/${response.license}) license
  
 
 ## Questions
