@@ -6,18 +6,27 @@ const showBadge = (license) => {
   }
 };
 
-// const badgeInfo = (license) => {
-//   if (license == "none") {
-//     return "";
-//   } else {
-//     return " ## License" "This application is covered by the `![${license}](https://opensource.org/licenses/${license})` license";
-//   }
-// };
+const licenseLink = (license) => {
+  if (license == "none") {
+    return "";
+  } else {
+    return `[${license}](https://opensource.org/licenses/${license})`;
+  }
+};
+
+const licenseSection = (license) => {
+  if (license == "none") {
+    return "";
+  } else {
+    return `## [License](#table-of-contents)
+  covered under the ${licenseLink(license)} license`;
+  }
+};
 
 const showLicense = (license) => {
   if (license == "none") return "";
   else {
-    return ` * [License](#license)`;
+    return `* [License](#license)`;
   }
 };
 
@@ -52,7 +61,7 @@ ${response.contribution}
 ## Test 
 ${response.test}
 
-${badgeInfo(response.license)}
+${licenseSection(response.license)}
 
 ## Questions
 

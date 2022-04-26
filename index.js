@@ -11,7 +11,6 @@ const questions = [
       if (input) {
         return true;
       } else {
-        ("Please enter project title");
         return false;
       }
     },
@@ -24,7 +23,6 @@ const questions = [
       if (input) {
         return true;
       } else {
-        ("Please describe your project");
         return false;
       }
     },
@@ -37,7 +35,6 @@ const questions = [
       if (input) {
         return true;
       } else {
-        ("Please enter installation instructions");
         return false;
       }
     },
@@ -50,7 +47,6 @@ const questions = [
       if (input) {
         return true;
       } else {
-        ("Please enter usage information");
         return false;
       }
     },
@@ -63,7 +59,6 @@ const questions = [
       if (input) {
         return true;
       } else {
-        ("Please provide contribution guidelines");
         return false;
       }
     },
@@ -76,7 +71,6 @@ const questions = [
       if (input) {
         return true;
       } else {
-        ("Please enter test data");
         return false;
       }
     },
@@ -95,7 +89,6 @@ const questions = [
       if (input) {
         return true;
       } else {
-        ("Please enter your GitHub username");
         return false;
       }
     },
@@ -108,7 +101,6 @@ const questions = [
       if (input) {
         return true;
       } else {
-        ("Please enter your email");
         return false;
       }
     },
@@ -120,7 +112,7 @@ inquirer.prompt(questions).then((response) => {
 
   let content = generateMarkdown(response);
   console.log(content);
-  fs.writeFile("./dist/README36.md", content, (err) => {
+  fs.writeFile("./dist/README4.md", content, (err) => {
     if (err) throw err;
     console.log("generated");
   });
