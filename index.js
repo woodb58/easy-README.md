@@ -7,11 +7,12 @@ const questions = [
     type: "input",
     message: "Enter project title",
     name: "title",
-    validate: (title) => {
-      if (!title) {
-        return false;
-      } else {
+    validate: (input) => {
+      if (input) {
         return true;
+      } else {
+        ("Please enter project title");
+        return false;
       }
     },
   },
@@ -19,11 +20,12 @@ const questions = [
     type: "input",
     message: "Describe your project",
     name: "description",
-    validate: (description) => {
-      if (!description) {
-        return false;
-      } else {
+    validate: (input) => {
+      if (input) {
         return true;
+      } else {
+        ("Please describe your project");
+        return false;
       }
     },
   },
@@ -31,11 +33,12 @@ const questions = [
     type: "input",
     message: "Detail installation instructions",
     name: "installation",
-    validate: (installation) => {
-      if (!installation) {
-        return false;
-      } else {
+    validate: (input) => {
+      if (input) {
         return true;
+      } else {
+        ("Please enter installation instructions");
+        return false;
       }
     },
   },
@@ -43,11 +46,12 @@ const questions = [
     type: "input",
     message: "Provide and usage information",
     name: "usage",
-    validate: (usage) => {
-      if (!usage) {
-        return false;
-      } else {
+    validate: (input) => {
+      if (input) {
         return true;
+      } else {
+        ("Please enter usage information");
+        return false;
       }
     },
   },
@@ -55,23 +59,25 @@ const questions = [
     type: "input",
     message: "Provide contribution guidelines",
     name: "contribution",
-    validate: (contribution) => {
-      if (!contribution) {
-        return false;
-      } else {
+    validate: (input) => {
+      if (input) {
         return true;
+      } else {
+        ("Please provide contribution guidelines");
+        return false;
       }
     },
   },
   {
     type: "input",
-    message: "List test instructions",
+    message: "List test data",
     name: "test",
-    validate: (test) => {
-      if (!test) {
-        return false;
-      } else {
+    validate: (input) => {
+      if (input) {
         return true;
+      } else {
+        ("Please enter test data");
+        return false;
       }
     },
   },
@@ -79,25 +85,18 @@ const questions = [
     type: "list",
     message: "License for project",
     name: "license",
-    choices: [
-      "MIT",
-      "Apache-2.0",
-      "gpl-license",
-      "MPL-2.0",
-      "BSD-2-Clause",
-      "BSD-3-Clause",
-      "none",
-    ],
+    choices: ["MIT", "Apache", "gpl", "MPL", "BSD", "none"],
   },
   {
     type: "input",
     message: "Enter GitHub username",
     name: "username",
-    validate: (username) => {
-      if (!username) {
-        return false;
-      } else {
+    validate: (input) => {
+      if (input) {
         return true;
+      } else {
+        ("Please enter your GitHub username");
+        return false;
       }
     },
   },
@@ -105,11 +104,12 @@ const questions = [
     type: "input",
     message: "Enter email",
     name: "email",
-    validate: (email) => {
-      if (!email) {
-        return false;
-      } else {
+    validate: (input) => {
+      if (input) {
         return true;
+      } else {
+        ("Please enter your email");
+        return false;
       }
     },
   },
@@ -120,7 +120,7 @@ inquirer.prompt(questions).then((response) => {
 
   let content = generateMarkdown(response);
   console.log(content);
-  fs.writeFile("./dist/README21.md", content, (err) => {
+  fs.writeFile("./dist/README36.md", content, (err) => {
     if (err) throw err;
     console.log("generated");
   });

@@ -6,10 +6,26 @@ const showBadge = (license) => {
   }
 };
 
+const badgeInfo = (license) => {
+  if (license == "none") {
+    return "";
+  } else {
+    return " ## License <br /> This application is covered by the `![${license}](https://opensource.org/licenses/${license})` license";
+  }
+};
+
+const showLicense = (license) => {
+  if (license == "none") return "";
+  else {
+    return ` * [License](#license)`;
+  }
+};
+
 function generateMarkdown(response) {
   return `
 
 # ${response.title}
+
 ${showBadge(response.license)}
 
 ## Table-of-Contents
@@ -18,6 +34,7 @@ ${showBadge(response.license)}
 * [Installation](#installation)
 * [Contributions](#contributions)
 * [Test](#test)
+${showLicense()}
 * [Questions](#questions)
 
 ## Usage 
@@ -35,13 +52,7 @@ ${response.contribution}
 ## Test 
 ${response.test}
 
-## License
-
-
-This application is covered by the [${
-    response.license
-  }](https://opensource.org/licenses/${response.license}) license
- 
+${badgeInfo(response.license)}
 
 ## Questions
 
