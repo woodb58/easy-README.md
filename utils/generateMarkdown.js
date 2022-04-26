@@ -6,13 +6,13 @@ const showBadge = (license) => {
   }
 };
 
-const badgeInfo = (license) => {
-  if (license == "none") {
-    return "";
-  } else {
-    return " ## License <br /> This application is covered by the `![${license}](https://opensource.org/licenses/${license})` license";
-  }
-};
+// const badgeInfo = (license) => {
+//   if (license == "none") {
+//     return "";
+//   } else {
+//     return " ## License" "This application is covered by the `![${license}](https://opensource.org/licenses/${license})` license";
+//   }
+// };
 
 const showLicense = (license) => {
   if (license == "none") return "";
