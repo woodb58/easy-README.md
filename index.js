@@ -29,8 +29,8 @@ const questions = [
   },
   {
     type: "input",
-    message: "Detail installation instructions",
-    name: "installation",
+    message: "Provide and usage information",
+    name: "usage",
     validate: (input) => {
       if (input) {
         return true;
@@ -41,8 +41,8 @@ const questions = [
   },
   {
     type: "input",
-    message: "Provide and usage information",
-    name: "usage",
+    message: "Detail installation instructions",
+    name: "installation",
     validate: (input) => {
       if (input) {
         return true;
@@ -79,7 +79,7 @@ const questions = [
     type: "list",
     message: "License for project",
     name: "license",
-    choices: ["MIT", "Apache", "gpl", "MPL", "BSD", "none"],
+    choices: ["MIT", "Apache", "GPL v3", "MPL", "BSD 3-Clause", "none"],
   },
   {
     type: "input",
@@ -112,14 +112,8 @@ inquirer.prompt(questions).then((response) => {
 
   let content = generateMarkdown(response);
   console.log(content);
-  fs.writeFile("./dist/README4.md", content, (err) => {
+  fs.writeFile("./dist/README.md", content, (err) => {
     if (err) throw err;
     console.log("generated");
   });
 });
-
-// TODO: Create a function to initialize app
-// function init() {}
-
-// Function call to initialize app
-// init();
