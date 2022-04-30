@@ -112,6 +112,7 @@ inquirer.prompt(questions).then((response) => {
 
   let content = generateMarkdown(response);
   console.log(content);
+
   fs.writeFile("./dist/README.md", content, (err) => {
     if (err) throw err;
     console.log("generated");
